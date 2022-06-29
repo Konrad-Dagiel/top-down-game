@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% block main_content %}
+{% if top10 %}
+<main>
+    <h1>TOP 10 'ENDLESS' PLAYERS</h1>
+<table>
+    <tr>
+        <th scope='col'>Name</th>
+        <th scope='col'>Score</th>
+    </tr>
+    {% for i in top10 %}
+    <tr>
+    <td>{{i['user_id']}}</td>
+    <td>{{i['score']}}</td>
+
+    </tr>
+    {%endfor%}
+</table>
+{% else %}
+
+<p>EMPTY DATABASE</p>
+{%endif%}
+{% if you %}
+<h1>YOUR HIGHSCORE</h1>
+<table>
+    <tr>
+        <th scope='col'>Name</th>
+        <th scope='col'>Score</th>
+    </tr>
+    <tr>
+    <td>{{you['user_id']}}</td>
+    <td>{{you['score']}}</td>
+
+    </tr>
+</table>
+{% else %}
+<h1>Log in to see your highscore!</h1>
+{%endif%}
+</main>
+<nav>
+    <a href='{{url_for("index")}}'>BACK TO MAIN</a>
+</nav>
+{%endblock%}

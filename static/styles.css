@@ -1,0 +1,157 @@
+:root{
+    font-size:13px;
+    font-family:'Tw Cen MT Condensed','Tw Cen MT',Arial;
+}
+section p{
+    font-weight: bold;
+    color:whitesmoke;
+    font-style: italic;
+    padding:0.5em;
+    text-align: center;
+}
+p{
+    color:black;
+}
+*,*:before,*:after{
+    padding:0;
+    margin:0;
+}
+#sectionHUD{
+    background-color: lightslategray;
+    width: 512px;
+    height:96px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+                    "icon top top2 top3"
+                    "icon mid mid2 mid3"
+                    "icon bot bot2 bot3";
+    place-items: stretch;
+}
+
+.highlight{
+    border-radius: 5px;
+    background-color: lightblue;
+}
+section img{
+    grid-area:icon;
+    height: 96px;
+}
+#hp{
+    grid-area:mid;
+    max-width: 100%;
+    max-height: 100%;
+}
+#e{
+    grid-area:mid2;
+    max-width: 100%;
+    max-height: 100%;
+}
+#q{
+    grid-area:top2;
+    max-width: 100%;
+    max-height: 100%;
+}
+#kills{
+    grid-area:top3;
+    margin-right:10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+#level{
+    grid-area:mid3;
+    margin-right:10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+#ammo{
+    grid-area:bot;
+    max-width: 100%;
+    max-height: 100%;
+}
+#character{
+    grid-area:top;
+    max-width: 100%;
+    max-height: 100%;
+}
+#r{
+    grid-area:bot2;
+    max-width: 100%;
+    max-height: 100%;
+}
+#gamemode{
+    grid-area:bot3;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.lossscreen{
+    position:fixed;
+    z-index:98;
+    top:0;
+    left:0;
+    width:512px;
+    height:320px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+#outcome{
+    font-size:3.2em;
+    color:red;
+    font-weight: bold;
+}
+#score{
+    color:red;
+    font-size:1.5em;
+    font-style: italic;
+}
+#play_again{
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 7px;
+    background-color: green;
+    color:red;
+    font-size:1.5em;
+    font-style: bold;
+}
+#play_again:hover{
+    background-color: blue;
+}
+#canvasfull{
+    width:512px;
+    position:relative;
+}
+a{
+    font-size: 2em;
+}
+.loadingscreen{
+    position:fixed;
+    z-index:99;
+    top:0;
+    left:0;
+    width:512px;
+    height:420px;
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+}
+.loadingscreen p{
+    font-weight: bold;
+    font-size: 2em;
+
+}
+.loadingscreen.hidden{
+    animation:fade_out 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fade_out{
+    100%{
+        visibility:hidden;
+        opacity: 0;
+    }
+}

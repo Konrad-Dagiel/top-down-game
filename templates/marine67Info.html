@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block main_content %}
+        <main>
+            <h1>MARINE: 67</h1>
+            <section class='info'>
+                <section>
+                <p class='middle'>INFO</p>
+                <h1>Weapon(Spacebar)</h1>
+                <h2>Assault Rifle</h2>
+                <p>30 ammo, full-auto fire</p>
+                <h1>Passive(Innate)</h1>
+                <h2>Military Training</h2>
+                <p>MARINE: 67 has higher movement speed than other characters</p>
+                <h1>Ability(E)</h1>
+                <h2>Instant Regeneration</h2>
+                <p>Heal for 15% of your hp instantly, capped at 100% hp</p>
+                <h1>Ultimate(Q)</h1>
+                <h2>Tactical Reload</h2>
+                <p>Instantly reload your weapon with a clip containing 100 bullets</p>
+                <p>(Extra bullets gained from 'Tactical Reload' do not contribute to charging your ultimate)</p>
+                </section>
+                <section>
+                    <img src="{{ url_for('static',filename='marine6body.png') }}" alt="MARINE:67"/>
+                </section>
+            </section>
+        <a href="{{url_for('charselect')}}">CHARACTER SELECT</a> 
+        <a href="{{url_for('marine67')}}">PLAY</a>
+        </main>
+{% endblock %}

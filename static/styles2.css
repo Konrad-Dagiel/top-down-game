@@ -1,0 +1,246 @@
+:root{
+    font-size:26px;
+    font-family:'Tw Cen MT Condensed','Tw Cen MT',Arial;
+    --orange:orange;
+    --gray:lightgray;
+    --playBtnColor:green;
+}
+
+@viewport{
+    width:device-width;
+}
+
+*,*:before,*:after{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+
+.select{
+    display:flex;
+    width:100%;
+    margin:auto;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    background-color: var(--gray);
+    text-align: center;
+}
+header h1{
+    background-color: var(--orange);
+    text-align:center;
+    font-size: 3em;
+}
+header{
+    height:20vh;
+    display: flex;
+    background-color: var(--orange);
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+header img{
+    height:100%;
+    animation:headrotate 3s infinite;
+}
+
+.select section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:max-content;
+    align-items: center;
+    height:50vh;
+    flex-grow: 1;
+}
+.select section img{
+    display: block;
+    width:50%;
+    margin:auto;
+}
+
+#marine67select{
+    background-color: aquamarine;
+}
+#marine67select:hover{
+    background-color: rgb(127, 161, 255);
+    border:6px solid blue;
+}
+#grimselect{
+    background-color: gray;
+}
+#grimselect:hover{
+    background-color: rgb(83, 83, 83);
+    border:6px solid black;
+}
+.character_name{
+    text-decoration: none;
+    font-size: 2em;
+    color:black;
+}
+.select section p a{
+    color:red;
+}
+.select section p a:hover{
+    color:red;
+    background-color: var(--orange);
+
+}
+.select > a{
+    background-color: bisque;
+    width:100%;
+    height:50vh;
+    text-align: center;
+    border:4px solid black;
+    border-collapse:collapse;
+}
+.select > a > p{
+    margin-top:20vh;
+    font-size:2em;
+}
+.select > a:hover{
+    border:7px solid red;
+    font-size:1.2em;
+}
+.select > .group{
+    background-color: bisque;
+    width:100%;
+    height:50vh;
+    text-align: center;
+    border:4px solid black;
+    border-collapse:collapse;
+}
+.group a{
+    font-size: 2em;
+}
+.select > .group:hover{
+    border:7px solid red;
+    font-size:1.2em;
+}
+
+#howtoplay{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#howtoplay .right{
+    margin-left:25px;
+}
+
+
+#howtoplay section .control{
+    border:2px solid var(--orange);
+    margin-top:2px;
+    height:20vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                        "m1 m2"
+                        "b1 m2";
+}
+#howtoplay section h2{
+    grid-area: m1;
+}
+#howtoplay section img{
+    grid-area: m2;
+    width:40%;
+    margin:auto;
+}
+#howtoplay section p{
+    grid-area: b1;
+}
+
+.info{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.info section{
+    border:3px solid var(--orange);
+    border-radius: 25px;
+}
+.middle{
+    text-align: center;
+}
+.info img{
+    display: block;
+    margin:0 auto;
+    width:40%;
+}
+
+table{
+    border-collapse: collapse;
+    overflow: auto;
+    width:50%;
+    margin:0 auto;
+}
+th{
+    font-weight: bold;
+    border:3px solid black;
+    background-color: var(--gray);
+}
+td{
+    border:3px solid black;
+    background-color: white;
+    text-align: center;
+    vertical-align: center;
+}
+section+a{
+    text-align: center;
+    background-color:bisque;
+    display:block;
+    font-size: 1.5em;
+    border:4px solid black;
+    border-collapse:collapse;
+    margin:0 auto;
+}
+section+a:hover{
+    border:7px solid red;
+}
+@keyframes headrotate{
+    0%{
+        transform:rotate(-5deg);
+    }
+    50% {
+        transform:rotate(10deg);
+    }
+    100%{
+        transform:rotate(-5deg);
+    }
+}
+#endscreen{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height:50vh;
+    background-color: bisque;
+}
+#endscreen a{
+    font-size: 2em;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding-top:20vh;
+    border:4px solid black;
+    border-collapse:collapse;
+    
+}
+#endscreen a:hover{
+    border:7px solid red;
+    font-size: 2.2em;
+}
+#winner{
+    font-size:2em;
+    padding:40px;
+    background-color:lightgreen;
+}
+.monster{
+    font-weight: bold;
+    font-size:1.2em;
+    text-decoration: underline;
+}
+ul li ul li{
+    font-weight: normal;
+    font-size:0.8em;
+    text-decoration:none;
+}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block main_content %}
+        <main>
+        <h1>HOME</h1>
+        <section class='select'>
+        <a href="{{url_for('howtoplay')}}"><p>HOW TO PLAY</p></a>
+        <a href="{{url_for('modeselect')}}"><p>PLAY</p></a> 
+        <a href="{{url_for('leaderboard')}}"><p>LEADERBOARD</p></a>
+        </main>
+{% endblock %}

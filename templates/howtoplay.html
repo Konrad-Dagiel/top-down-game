@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block main_content %}
+<main>
+    <h1>How To Play</h1>
+    <section id='howtoplay'>
+    <section class='split'>
+        <h1>Controls</h1>
+        <section class='control'>
+        <h2>MOVE</h2>
+        <p>Move speed varies with Character</p>
+        <img src="{{ url_for('static',filename='arrows.png') }}" alt='arrow keys'/>
+    </section>
+    <section class='control'>
+        <h2>SHOOT</h2>
+        <img src="{{ url_for('static',filename='spacebar.png') }}" alt='space bar'/>
+        <p>Weapon type varies with Character</p>
+    </section>
+    <section class='control'>
+        <h2>RELOAD</h2>
+        <img src="{{ url_for('static',filename='r.png') }}" alt='r key'/>
+        <p>Some Characters (eg. GRIM) have one-shot weapons, hence no reload</p>
+    </section>
+    <section class='control'>
+        <h2>ABILITY</h2>
+        <img src="{{ url_for('static',filename='e.png') }}" alt='e key'/>
+        <p>Can only be used after a short cooldown</p>
+    </section>
+    <section class='control'>
+        <h2>ULTIMATE</h2>
+        <img src="{{ url_for('static',filename='q.png') }}" alt='q key'/>
+        <p>Can only be used when charged to 100%, charge by damaging enemies</p>
+    </section>
+    </section>
+    <section class='split'>
+        <h1>Goal</h1>
+        <section class='right'>
+            <h2>Story Mode:</h2>
+            <ul>
+                <li>Run away from the dragon through different terrains, fighting his minions at each new land!</li>
+                <li>Defeat the dragon once you reach his cave!</li>
+                <li>If your hp reaches 0, you die!</li>
+            </ul>
+        </section>
+        <section class='right'>
+            <h2>Endless Mode:</h2>
+            <ul>
+            <li>Kill all enemies to proceed forward</li>
+            <li>Survive as long as possible agains endless waves of enemies</li>
+            <li>How many levels can you survive?</li>
+            <li>If logged in, highscore will be tracked</li>
+            <li>The top 10 high scores are also tracked and viewable <a href="{{url_for('leaderboard')}}">HERE</a></a></li>
+            </ul>
+        </section>
+        <section class='right'>
+            <h1>ENEMIES:</h1>
+            <ul>
+                <li class='monster'>Zombie
+                    <ul>
+                        <li>Moves slowly and unintelligently.</li>
+                        <li>Easy to kill, does small damage if touching player</li>
+                        <li>No special effect</li>
+                    </ul>
+                </li>
+                <li class='monster'>Baphomet
+                
+                    <ul>
+                        <li>Moves semi-intelligently</li>
+                        <li>Hard to kill, does double damage if touching player</li>
+                        <li>Will charge 3 times at random intervals</li>
+                        <li>Charge direction is dictated by players past position, so keep moving!</li>
+                    </ul>
+                </li>
+                <li class='monster'>Dragon
+                
+                    <ul>
+                        <li>Will perform a more accurate version of Baphomet's charge</li>
+                        <li>Can spawn up to 14 other creatures</li>
+                        <li>Good luck killing this beast!</li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </section>
+
+    </section>
+
+    </section>
+    <a href="{{url_for('index')}}">BACK TO HOME</a>
+</main>
+{%endblock%}

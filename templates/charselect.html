@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block main_content %}
+        <main>
+            <h1>Character Select</h1>
+            <section class='select'>
+            <section id='marine67select'>
+            <a href="{{url_for('marine67')}}"><img src="{{ url_for('static',filename='soldier.png') }}" alt="MARINE:67"/></a>
+            <a href="{{url_for('marine67')}}" class='character_name'>MARINE:67</a>
+            <p>
+            <a href="{{url_for('marine67Info')}}">INFO</a>
+            </p>
+            </section>
+            <section id='grimselect'>
+            <a href="{{url_for('grim')}}"><img src="{{ url_for('static',filename='reaper.png') }}" alt="GRIM"/></a>
+            <a href="{{url_for('grim')}}" class='character_name'>GRIM</a>
+            <p>
+            <a href="{{url_for('grimInfo')}}">INFO</a>
+            </p>
+
+            </section>
+        </section>
+        <a href="{{url_for('index')}}">BACK TO HOME</a>
+        </main>
+{% endblock %}

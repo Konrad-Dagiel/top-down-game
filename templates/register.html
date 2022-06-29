@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+<main>
+<h1>Register</h1>
+<p>Press submit to register!</p>
+<form action='' method='post' novalidate>
+    {{ form.hidden_tag() }}
+    {{ form.user_id.label }}
+    {{ form.user_id() }}
+    {% for error in form.user_id.errors %}
+        {{error}}
+    {% endfor %}
+    <br/>
+    {{ form.password.label }}
+    {{ form.password() }}
+    {% for error in form.password.errors %}
+        {{error}}
+    {% endfor %}
+    <br/>
+    <br/>
+    {{ form.password2.label }}
+    {{ form.password2() }}
+    {% for error in form.password2.errors %}
+        {{error}}
+    {% endfor %}
+    {{ form.submit() }}
+</form>
+</main>
+<nav>
+    <a href='{{url_for("index")}}'>BACK TO MAIN</a>
+</nav>
+
+{% endblock %}

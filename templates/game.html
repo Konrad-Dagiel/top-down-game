@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'/>
+        <title>CA2</title>
+        <script src="{{ url_for('static',filename='js.js') }}" type='module'></script>
+        <link rel='stylesheet' href="{{ url_for('static',filename='styles.css') }}"/>
+    <body>
+        <section id='canvasfull'>
+        <canvas width='512' height='320'>
+
+        </canvas>
+        <section id='sectionHUD'>
+            <img alt='player icon'/>
+            <p id='ammo'>
+            </p>
+            <p id='kills'>
+                kills:0/5
+            </p>
+            <p id='character'>
+                {{character}}
+            </p>
+            <p id='q'>
+                Ultimate : 0%
+
+            </p>
+            <p id='hp'>
+                hp:100
+            </p>
+            <p id='level'>
+                level: 1
+            </p>
+            <p id='e'>
+                E: ready
+            </p>
+            <p id='r'>
+                R:reload
+            </p>
+            <p id='gamemode'>
+                
+            </p>
+        </section>
+        <section class='lossscreen'>
+        <p id='outcome'></p>
+        <p id='score'></p>
+        <a id='play_again' href='{{url_for("charselect")}}'></a>
+        </section>
+        </section>
+        <a href="{{url_for('index')}}">BACK TO HOME</a>
+        <section class='loadingscreen'>
+        <p>LOADING...</p>
+        </section>
+    </body>
+</html>

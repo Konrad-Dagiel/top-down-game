@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block main_content %}
+        <main>
+            <h1>Mode Select</h1>
+            <section class='select'>
+            <section class='group'>
+            <a href="{{url_for('story')}}"><p>STORY</p></a>
+            <p>5 levels, including a final boss!</p>
+            </section>
+            <section class='group'>
+            <a href="{{url_for('endless')}}"><p>ENDLESS</p></a>
+            <p>Endless Levels, endless fun!</p>
+            </section>
+            </section>
+            <a href="{{url_for('index')}}">BACK TO HOME</a>
+        </main>
+{% endblock %}

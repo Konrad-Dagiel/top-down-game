@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block main_content %}
+        <main>
+            <h1 id='winner'>YOU WIN!</h1>
+            <section id='endscreen'>
+            <a href="{{url_for('charselect')}}">PLAY AGAIN</a>
+            <a href="{{url_for('index')}}">HOME</a>
+            </section>
+        </main>
+{% endblock %}

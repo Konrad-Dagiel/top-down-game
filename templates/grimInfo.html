@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block main_content %}
+        <main>
+            <h1>GRIM</h1>
+            <section class='info'>
+                <section>
+                <p class='middle'>INFO</p>
+                <h1>Weapon(Spacebar)</h1>
+                <h2>Shotgun</h2>
+                <p>1 ammo, reload after every shot</p>
+                <h1>Passive(Innate)</h1>
+                <h2>Bloodlust</h2>
+                <p>GRIM heals for 1%hp for every bullet that connects with an enemy (max 100%hp)</p>
+                <h1>Ability(E)</h1>
+                <h2>Ghost Mode</h2>
+                <p>Become immune to damage for a short time, and gain movement speed</p>
+                <p>(Shooting will cancel ghost mode)</p>
+                <h1>Ultimate(Q)</h1>
+                <h2>KILL! KILL! KILL!</h2>
+                <p>Shoot in all directions in 3 bursts, dealing bonus damage</p>
+                <p>(Extra hits from 'KILL! KILL! KILL!' do not contribute to charging your ultimate)</p>
+            </section>
+            <section>
+                <p>
+                    <img src="{{ url_for('static',filename='grimbody.png') }}" alt="GRIM"/>
+                </p>
+            </section>
+            </section>
+        <a href="{{url_for('charselect')}}">CHARACTER SELECT</a> 
+        <a href="{{url_for('marine67')}}">PLAY</a>
+        </main>
+{% endblock %}
