@@ -1,6 +1,8 @@
 # top-down-game
 
 To play, place files in a code editor.
+If you don't have Flask installed:
+$ pip install flask
 Navigate terminal to app.py.
 $ python -m flask run
 Then in your browser:
