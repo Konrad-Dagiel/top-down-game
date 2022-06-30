@@ -1,12 +1,12 @@
 # top-down-game
 
-To play, place files in a code editor.
-If you don't have Flask installed:
-$ pip install flask
-Navigate terminal to app.py.
-$ python -m flask run
-Then in your browser:
-localhost:5000
+To play, place files in a code editor. \n
+If you don't have Flask installed: \n
+$ pip install flask \n
+Navigate terminal to app.py. \n
+$ python -m flask run \n
+Then in your browser: \n
+localhost:5000 \n
 
 This should bring you to the index.html page.
 
